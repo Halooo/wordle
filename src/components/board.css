@@ -1,0 +1,57 @@
+.yellow {
+  background-color: rgb(219, 219, 40);
+}
+
+.green {
+  background-color: rgb(37, 204, 54);
+}
+
+.grey {
+  background-color: #a6a6a6;
+}
+
+.untouched {
+  background-color: #dadada;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  height: 50px;
+  width: 50px;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.fixed {
+  top: 10vh;
+  position: fixed;
+}
+
+.alert-container {
+  position: fixed;
+  top: 4vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+}
+
+.alert-inner {
+  display: inline-block;
+  padding: 8px 16px;
+  z-index: 1;
+  border-radius: 12px;
+  background-color: #dadada;
+}

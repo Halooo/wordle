@@ -1,0 +1,12 @@
+.kb {
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  margin: 2px;
+}
+
+.block {
+  display: block;
+  text-align: center;
+  padding: 10px;
+}
