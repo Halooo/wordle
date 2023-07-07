@@ -76,23 +76,24 @@ export default function Board(props) {
   });
 
   const handleSubmit = () => {
-    if (inputVal.length !== target.length) {
+    const inputNormalized = inputVal.toLowerCase();
+    if (inputNormalized.length !== target.length) {
       handleAlert(
-        `Input ${inputVal.length} not matching word length ${target.length}`
+        `Input ${inputNormalized.length} not matching word length ${target.length}`
       );
-    } else if (dictionary[inputVal.toLowerCase()] !== 1) {
+    } else if (dictionary[inputNormalized] !== 1) {
       handleAlert("Not in the word list");
     } else {
-      if (inputVal === target) {
+      if (inputNormalized === target) {
         handleAlert("Congrats, you got the word!");
         setDisabledSubmit(true);
       }
       if (n + 1 === GUESS_LIMIT) {
-        guess[n] = Array.from(inputVal);
+        guess[n] = Array.from(inputNormalized);
         setGuess(guess);
         setDisabledSubmit(true);
       } else {
-        guess[n] = Array.from(inputVal);
+        guess[n] = Array.from(inputNormalized);
         setGuess(guess);
       }
       setN(n + 1);
